@@ -12,6 +12,7 @@ public class BaseClass
 	public String url;
 	public WebDriver driver;
 	public String env;
+	public String accesskey;
 	
 	@BeforeMethod
 	public void setup()
