@@ -13,7 +13,7 @@ public class BaseClass
 	public String accesskey;
 	public WebDriver driver;
 	public String env;
-	public String accesskey;
+	public String accesskeynew;
 	
 	@BeforeMethod
 	public void setup()
