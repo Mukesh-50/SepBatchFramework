@@ -9,8 +9,9 @@ import com.ots.factory.BrowserFactory;
 
 public class BaseClass 
 {
-	
+	public String url;
 	public WebDriver driver;
+	public String env;
 	
 	@BeforeMethod
 	public void setup()
