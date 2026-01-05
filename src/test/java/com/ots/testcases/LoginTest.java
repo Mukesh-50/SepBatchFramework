@@ -21,7 +21,7 @@ public class LoginTest extends BaseClass
 	
 		String welcomeText=dashboard.getWelcomeMessage();
 		
-		Assert.assertTrue(welcomeText.contains("Welcome"),"Login Messages Did Not Appear");
+		Assert.assertTrue(welcomeText.contains("Welcome1"),"Login Messages Did Not Appear");
 		
 		dashboard.signoutFromApplication();
 		
