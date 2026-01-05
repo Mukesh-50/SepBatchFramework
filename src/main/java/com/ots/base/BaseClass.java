@@ -9,10 +9,11 @@ import com.ots.factory.BrowserFactory;
 
 public class BaseClass 
 {
-	public String url;
-	public String accesskey;
+	public String lambdatest_username;
 	public WebDriver driver;
 	public String env;
+	public String accesskey;
+	public String url;
 	
 	@BeforeMethod
 	public void setup()
