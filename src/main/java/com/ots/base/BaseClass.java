@@ -10,6 +10,7 @@ import com.ots.factory.BrowserFactory;
 public class BaseClass 
 {
 	public String url;
+	public String accesskey;
 	public WebDriver driver;
 	public String env;
 	
