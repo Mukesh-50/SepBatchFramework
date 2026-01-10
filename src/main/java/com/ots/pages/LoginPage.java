@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import com.ots.helper.Utility;
+
+
 public class LoginPage 
 {
 	WebDriver driver;
@@ -22,6 +25,9 @@ public class LoginPage
 	private By newUserLink = By.linkText("New user? Signup");
 
 	private By heading = By.xpath("//h2[text()='Sign In']");
+	
+	//private By successmessage= By.cssSelector("//div[@role='alert']");
+	private By successmessage= By.xpath("//div[@class='Toastify__toast-body']");	
 
 	public String getTitle() {
 		return driver.getTitle();
@@ -48,4 +54,22 @@ public class LoginPage
 		return dashboard;
 	}
 
+	//Navigates to the signup/registration page by clicking the "New User" link.
+	public RegistrationPage navigatetoSignuppage()
+	{
+		driver.findElement(newUserLink).click();
+		RegistrationPage registrationpage= new RegistrationPage(driver);
+		return  registrationpage;
+	}
+		
+	// verify signup success message alert message on sign in page
+	public boolean  VerifySignupConfirmationMessage() 
+	{
+		System.out.println("come to validation");
+		Utility.waitForElementToBeClickable(driver, successmessage, 5);
+		boolean signupsuccessmessage=driver.findElement(successmessage).getText().contentEquals("Signup successfully, Please login!");
+		System.out.println("validation completed and return the boolean");
+		return signupsuccessmessage;
+	}
+		
 }
