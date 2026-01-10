@@ -20,17 +20,17 @@ public class DataProviders
 	@DataProvider(name="getRegistrationData")
 	public static Object[][] getRegistrationData()
 	{
-		System.out.println("LOG:INFO-Loading Data From Excel");
+		System.out.println("LOG:INFO-Loading Registration Data From Excel");
 		
-		Object[][]arr=ExcelUtility.getData("RegisterUser");
+		Object[][]arr=ExcelUtility.getData("RegisterationDetails","TestData");
 		
-		System.out.println("LOG:INFO-Test Data Is Ready");
+		System.out.println("LOG:INFO-Registration Test Data Is Ready");
 		
 		return arr;
 	}
 	
 	
-	@DataProvider(name="getRegistrationData")
+	@DataProvider(name="getCourseData")
 	public static Object[][] getCourseData()
 	{
 		System.out.println("LOG:INFO-Loading Data From Excel");
@@ -43,7 +43,7 @@ public class DataProviders
 	}
 	
 	
-	@DataProvider(name="getRegistrationData")
+	@DataProvider(name="getCategoryData")
 	public static Object[][] getCategoryData()
 	{
 		System.out.println("LOG:INFO-Loading Data From Excel");
