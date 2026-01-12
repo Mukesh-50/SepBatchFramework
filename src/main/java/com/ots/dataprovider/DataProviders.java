@@ -54,5 +54,17 @@ public class DataProviders
 		
 		return arr;
 	}
+	
+	@DataProvider(name="cartdata")
+	public static Object[][] getCartdata()
+	{
+		System.out.println("LOG:INFO-Loading Data From Excel");
+		
+		Object[][]arr=ExcelUtility.getData("Cart");
+		
+		System.out.println("LOG:INFO-Test Data Is Ready");
+		
+		return arr;
+	}
 
 }

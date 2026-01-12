@@ -1,4 +1,5 @@
 test-output/
+Reports/
 .DS_Store
 .settings
 .project
