@@ -16,5 +16,5 @@ cd SepBatchFramework
 
 To run tests, run the following command
 
-mvn clean test
+mvn clean test -Dxmlfiles=testng.xml
 
