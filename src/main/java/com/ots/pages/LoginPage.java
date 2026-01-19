@@ -47,5 +47,20 @@ public class LoginPage
 
 		return dashboard;
 	}
+	
+	
+	public Cartpage  loginToApplicationcart(String user, String pass) 
+	{
+		driver.findElement(username).sendKeys(user);
+		
+		driver.findElement(password).sendKeys(pass);
+		
+		driver.findElement(loginButton).click();
+	
+		Cartpage cart = PageFactory.initElements(driver, Cartpage.class);
+
+		return cart;
+	}
+
 
 }

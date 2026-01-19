@@ -11,6 +11,7 @@
   <test name="Test">
     <classes>
       <class name="com.ots.testcases.LoginTest"/>
+      <class name="com.ots.testcases.Carttest"/>
     </classes>
   </test> 
 </suite> 
